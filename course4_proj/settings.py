@@ -16,6 +16,9 @@ from configurations import values
 import os
 
 class Dev(Configuration):
+
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    ADMINS = [("Ben", "ben@example.com")]
     OMDB_KEY = "42ea1d6f"
     LOGGING = {
         "version": 1,
